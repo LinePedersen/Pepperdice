@@ -12,9 +12,33 @@
   <body>
     <h1>Dice Roller</h1>
     <button onclick="rollDice()">Roll Dice</button>
+    <script>
+      document.getElementById("resultingRoll").value = resultingThrow;
+    </script>
     <br><br>
     <img id="dice1">
     <img id="dice2">
+    <p>Either summit your roll or change it in the field below</p>
     <script src="diceRoller.js"></script>
+    
+
+    <input type="text" id="submitted_throw_id" ><br>
+    <button onclick="displayMessage()">Submit Answer</button>
+
+
+    <p id="submitted_throw_display"></p>
+
+    <script>
+    function displayMessage(){
+      let submitted_throw = document.getElementById("submitted_throw_id").value;
+      if (submitted_throw){
+          document.getElementById("submitted_throw_display").innerHTML = submitted_throw;
+      }
+      else{
+          document.getElementById("submitted_throw_display").innerHTML = resultingThrow;
+      }
+    }
+    </script>
+
   </body>
 </html>

@@ -9,14 +9,14 @@ function rollDice() {
     document.getElementById("dice1").src = "dice" + roll1 + ".png";
     document.getElementById("dice2").src = "dice" + roll2 + ".png";
     const result = roll1.toString + roll2.toString
-    document.getElementById("resultingThrow").src = result
+    document.getElementById("resultingRoll").src = result
   }
 
   else{
     document.getElementById("dice1").src = "dice" + roll2 + ".png";
     document.getElementById("dice2").src = "dice" + roll1 + ".png";
     const result = roll2.toString + roll1.toString
-    document.getElementById("resultingThrow").src = result
+    document.getElementById("resultingRoll").src = result
   }
 
   return result
